@@ -1,0 +1,9 @@
+div {
+  width: 100px;
+  height: 1px;
+  transition: all 1s linear;
+}
+
+div h1 {
+  background: red;
+}

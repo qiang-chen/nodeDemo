@@ -1,0 +1,61 @@
+{
+    "filename": "abc",
+    "isFile": false,
+    "singlePath": "abc",
+    "children": [{
+        "filename": "1.txt",
+        "children": null,
+        "isFile": true,
+        "singlePath": "abc\\1.txt"
+    }, {
+        "filename": "2.txt",
+        "children": null,
+        "isFile": true,
+        "singlePath": "abc\\2.txt"
+    }, {
+        "filename": "a",
+        "isFile": false,
+        "singlePath": "abc\\a",
+        "children": [{}]
+    }, {
+        "filename": "b",
+        "isFile": false,
+        "singlePath": "abc\\b",
+        "children": [{
+            "filename": "12.txt",
+            "children": null,
+            "isFile": true,
+            "singlePath": "abc\\b\\12.txt"
+        }, {
+            "filename": "d",
+            "isFile": false,
+            "singlePath": "abc\\b\\d",
+            "children": [{
+                "filename": "a.txt",
+                "children": null,
+                "isFile": true,
+                "singlePath": "abc\\b\\d\\a.txt"
+            }]
+        }, {
+            "filename": "m",
+            "isFile": false,
+            "singlePath": "abc\\b\\m",
+            "children": [{
+                "filename": "a.txt",
+                "children": null,
+                "isFile": true,
+                "singlePath": "abc\\b\\m\\a.txt"
+            }]
+        }]
+    }, {
+        "filename": "c",
+        "isFile": false,
+        "singlePath": "abc\\c",
+        "children": [{
+            "filename": "2.txt",
+            "children": null,
+            "isFile": true,
+            "singlePath": "abc\\c\\2.txt"
+        }]
+    }]
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <ul>
+        <li key="1"></li>
+        <li key="2"></li>
+        <li key="3"></li>
+        <li key="4"></li>
+    </ul>
+    <script>
+
+
+
+        let oUl = document.getElementsByTagName('ul')[0];
+        //获取ul标签
+        let li = document.getElementsByTagName('li');
+        //获取所有的li标签
+        const {map,forEach} = [];
+        //结构赋值两个高阶函数
+        li = map.call(li,item=>{
+            //循坏li 并且改变this指向
+            let key = 2 * item.getAttribute('key') - 1;
+            //获取每个li的自定义属性key 将其*2-1后赋值给key
+            item.setAttribute('key',key);
+            //重新覆盖原有的key
+            return item;
+        });
+        oUl.innerHTML = '';
+        //清空 oul下面的元素
+        forEach.call(li,item=>{
+            //把改变后的li重新添加给ul
+            oUl.appendChild(item);
+        })
+
+        //请结合html和javaScript描述出这段代码的运行效果，并给每句代码添加注释，在注释中指明该句代码的含义
+
+    </script>
+</body>
+
+</html>

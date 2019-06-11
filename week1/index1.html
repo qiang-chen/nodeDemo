@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function check(str) {
+            var U = 0, D = 0, L = 0, R = 0;
+            for (var i = 0; i < str.length; i++) {
+                switch (str[i]) {
+                    case "U": U++; break;
+                    case "D": D++; break;
+                    case "L": L++; break;
+                    case "R": R++; break;
+                }
+            }
+            return (U==D && L==R)
+        }
+
+
+    function check(){
+        document.body.onkeydown=function(e){
+            console.log(e.keyCode);
+            let R=0,U=0,D=0,L=0;
+            if(e.keyCode==82){
+                R++;
+            }else if(e.keyCode==76){
+                L++;
+            }else if(e.keyCode==85){
+                U++;
+            }else if(e.keyCode==68){
+                D++;
+            }
+        }
+
+        if(U+D==0){
+            return trues;
+        }else if(L+R==0){
+            return true
+        }
+
+    }
+
+    check();
+
+
+
+    </script>
+</body>
+
+</html>

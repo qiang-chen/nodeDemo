@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.container {
+  background-color: red;
+  margin: 50px; }
+  .container h1 {
+    color: #eee; }
+
+.left {
+  width: 80px;
+  height: auto;
+  float: left; }
+  .left p {
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px; }
+  .left p.active {
+    background: green; }
+
+.right {
+  float: left; }
+  .right .top {
+    width: 500px;
+    display: flex; }
+    .right .top span {
+      flex: 1; }
+    .right .top span.active {
+      background: magenta; }
+  .right .bottom p {
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px; }

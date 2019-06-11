@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let arr = ["a", "b", "c", "d"];
+        let a = arr.reduce((per, cur,index) => {
+            per[cur]=index;
+            return per
+        },{})
+        //得到{a: 0, b: 1, c: 2, d: 3}
+        console.log(a)
+    </script>
+</body>
+
+</html>

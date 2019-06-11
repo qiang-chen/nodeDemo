@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-color: red;
+    margin:50px;
+    h1{
+        color: #eee;
+
+    }
+}
+.left{
+    width: 80px;
+    height: auto;
+    float: left;
+    p{
+        width: 80px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+    }
+    p.active{
+        background: green;
+    }
+}
+.right{
+    float: left;
+    .top{
+        width: 500px;
+        display: flex;
+        span{
+            flex: 1;
+        }
+        span.active{
+            background: magenta;
+        }
+    }
+    .bottom{
+        p{
+            width: 80px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+        }
+    }
+}
+

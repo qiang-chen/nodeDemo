@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function time(n) {
+            return new Promise((resolve, reject) => {
+                setTimeout(function () {
+                    resolve(10);//几秒以后通过promise发出一个数字
+                }, n)
+            })
+        }
+
+        async function add() {
+            //我想要在一秒后得到一个10 
+            //在得到这个10以后的两秒后再得到一个10 
+            //在得到两个10以后的1后再得到一个
+            //利用async函数中的await方法
+
+            let n1 = await time(1000);
+            console.log(n1, "1s后的")
+            let n2 = await time(2000);
+            console.log(n2, "1s后的2s")
+            let n3 = await time(1000);
+            console.log(n1 + n2 + n3, "1s后的2s后的1s");
+            let n4 = await ajax("index");//这里会报错 但是进入了下面的容错
+            return n1 + n2 + n3;
+
+        }
+        //async 返回的是一个Promise对象 然后通过then调用成功函数接受return后的结果
+        //如果出错了可以用catch接受或者then的第二个参数失败函数
+        add().then((res) => {
+            console.log(res)
+        }).catch((res) => {
+            console.log("报错")
+        })
+
+    </script>
+</body>
+
+</html>

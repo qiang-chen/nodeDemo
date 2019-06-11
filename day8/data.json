@@ -1,0 +1,24 @@
+{
+    "name": "aa",
+    "type": "dir",
+    "children": [{
+        "name": "css",
+        "type": "dir",
+        "children": [{
+            "name": "common.css",
+            "type": "file",
+            "children": "*{padding:0;margin:0;list-style:none}"
+        }, {
+            "name": "style.css",
+            "type": "file",
+            "children": "div{width:100px;height:100px}"
+        }]
+    }, {
+        "name": "index.js",
+        "type": "file",
+        "children": "console.log('index')"
+    }, {
+        "name": "mock",
+        "type": "dir"
+    }]
+}

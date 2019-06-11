@@ -1,0 +1,1 @@
+"use strict";var _a$b={a:11,b:88},a=_a$b.a,b=_a$b.b;btn.onclick=function(){console.log(a,b)};

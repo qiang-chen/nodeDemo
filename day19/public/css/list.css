@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 60%;
+  height: 500px;
+  border: solid 2px #eee;
+  margin: 20px auto;
+}
+
+.container .nav {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #000;
+}
+
+.container .nav span {
+  flex: 1;
+  height: 100%;
+  line-height: 80px;
+  text-align: center;
+}
+
+.container .nav span.active {
+  background: red;
+  color: #fff;
+}

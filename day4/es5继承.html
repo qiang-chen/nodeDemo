@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function A(){
+            //构造函数A
+            this.name="我是A函数";
+        }
+        
+        A.prototype={
+            constructor:A,
+            render(){
+                console.log("我是A实例的render方法")
+            }
+        }
+        
+        let a=new A();
+
+        function B(a){
+            this.age=a;
+            A.call(this);
+            //通过call改变this指向从而达到继承A函数里面的私有属性
+            console.log(this.name)
+        }
+        let b=new B("18")
+
+        //B函数继承A函数的原型
+        //B.prototype=A.prototype; 如果是这样直接继承的话会出现如果你改变B的方法A的同时在变
+        B.prototype=Object.create(A.prototype)
+        //原型继承完毕需要更改一下constructor指向
+        B.prototype.constructor=B;
+        B.prototype.render()
+        console.log(b)
+
+
+        //在上面代码的基础上 
+        //在上方代码中A函数没有toString这个函数 假如说我们通过a调用toString这个函数能不能调用到呢
+        a.toString()
+        //显而易见 我们能够找到这个函数 为什么呢 因为我们通过a找这个方法时候
+        //首先系统会先去我们A这个构造函数中去寻找 假如说我们从A中没有找到
+        //然后接着去A的原型prototype去寻找 如果这里面又没找到接着去找a的__proto__ 
+        //如果这个a的__proto__里面没有找到就接着再去__proto__去找 ，顺着proto
+        //找到最后是null 
+
+        //所以如果我们构造函数中有这个方法的话会先取我们构造函数中的 原型中有的话就去原型找
+        //都没有才去__proto__找
+    </script>
+</body>
+</html>

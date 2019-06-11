@@ -1,0 +1,26 @@
+{
+  "name": "gulp2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "g.js",
+  "scripts": {
+    "devs": "gulp -f=./g.js dev",
+    "bulish": "gulp -f=./g.js bulish",
+    "a": "gulp -f=./g.js getCSS",
+    "w": "gulp -f=./g.js s"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.4.3",
+    "gulp-babel": "^8.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webserver": "^0.9.1",
+    "mincss": "^0.4.1"
+  },
+  "dependencies": {}
+}

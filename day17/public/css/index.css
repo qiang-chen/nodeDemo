@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: 13.333333vw;
+}
+
+header, main .list .item .title span, main .list .item .one span:nth-child(1), main .item, footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #eee;
+}
+
+header {
+  width: 100%;
+  height: 1rem;
+  background: red;
+  font-size: 0.6rem;
+  color: #fff;
+}
+
+main {
+  flex: 1;
+  overflow: auto;
+  font-size: 0.36rem;
+}
+
+main .list {
+  width: 100%;
+}
+
+main .list .item {
+  box-sizing: border-box;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0.2rem 0;
+  padding: 0.2rem;
+  background: #fff;
+}
+
+main .list .item .title {
+  width: 100%;
+  height: 1rem;
+  line-height: 1rem;
+  border-bottom: 1px solid #000;
+  display: flex;
+}
+
+main .list .item .title span {
+  flex: 2;
+  height: 100%;
+  justify-content: flex-start;
+}
+
+main .list .item .title h1 {
+  font-size: 0.46rem;
+  height: 100%;
+  flex: 8;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+main .list .item .one {
+  width: 100%;
+  flex: 1;
+  display: flex;
+}
+
+main .list .item .one span {
+  min-width: 0;
+}
+
+main .list .item .one span:nth-child(1) {
+  flex: 3;
+  height: 100%;
+  justify-content: flex-start;
+}
+
+main .list .item .one span:nth-child(2) {
+  flex: 7;
+  height: 100%;
+  justify-content: flex-start;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+main .item {
+  width: 100%;
+  height: 0.8rem;
+  justify-content: space-around;
+}
+
+main .item input {
+  border: 0;
+  height: 60%;
+  outline: none;
+}
+
+main .box {
+  width: 100%;
+  height: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+main .box button {
+  width: 70%;
+  height: 100%;
+  background-color: skyblue;
+  color: #fff;
+  border: 0;
+  font-size: 0.44rem;
+  border-radius: 0.3rem;
+}
+
+footer {
+  width: 100%;
+  height: 1rem;
+  background: #ccc;
+  display: flex;
+}
+
+footer a {
+  flex: 1;
+  height: 100%;
+  font-size: 0.4rem;
+}
+
+footer a.active {
+  color: red;
+}

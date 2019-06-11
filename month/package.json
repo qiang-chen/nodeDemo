@@ -1,0 +1,17 @@
+{
+  "name": "month",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "better-scroll": "^1.15.2",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}

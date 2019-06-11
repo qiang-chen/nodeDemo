@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+%juzhong{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+html{
+    font-size: 13.333333vw;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    width: 100%;
+    height: 1rem;
+    background-color: skyblue;
+    @extend %juzhong;
+    font-size: 0.44rem;
+}
+main{
+    flex: 1;
+    overflow: auto;
+    .list{
+        width: 100%;
+        .item{
+            width: 100%;
+            height: 3rem;
+            display: flex;
+            background: #eee;
+            padding: 0.1rem;
+            margin: 0.1rem 0;
+            box-sizing: border-box;
+            .left{
+                flex: 8;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                font-size: 0.36rem;
+                p{
+                    flex: 1;
+                    display: flex;
+                    span{
+                        flex: 1;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                    }
+
+                }
+            }
+            .right{
+                flex: 2;
+                background: pink;
+                @extend %juzhong;
+                flex-direction: column;
+                button{
+                  margin-top: 0.2rem;
+                }
+            }
+        }
+    }
+    .box{
+        width: 100%;
+        .one{
+            width: 100%;
+            @extend %juzhong;
+            height: 1rem;
+            font-size: 0.36rem;
+            span{
+                width: 20%;
+            }
+            input{
+                width: 80%;
+                height: 60%;
+            }
+        }
+    }
+}
+footer{
+    width: 100%;
+    height: 1rem;
+    background: red;
+    font-size: 0.4rem;
+    @extend %juzhong;
+    a{
+        flex: 1;
+        color: #fff;
+        @extend %juzhong;
+        text-decoration: none;
+    }
+}

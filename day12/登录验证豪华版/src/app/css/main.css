@@ -1,0 +1,15 @@
+.container{
+    width: 100%;
+    text-align: center;
+}
+
+.box{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+dl{
+    flex: 1;
+    margin: 20px;
+    text-align: center;
+}
