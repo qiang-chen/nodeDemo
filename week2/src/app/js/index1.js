@@ -1,1 +1,0 @@
-console.log("我是2号js文件")
